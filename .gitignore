@@ -1,3 +1,4 @@
 # ignore shots directory, except for baseline images
 shots/*
 !shots/*baseline*
+node_modules/*
