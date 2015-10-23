@@ -2,3 +2,4 @@
 shots/*
 !shots/*baseline*
 node_modules/*
+.idea/

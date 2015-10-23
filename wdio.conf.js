@@ -33,7 +33,7 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-        browserName: 'phantomjs'
+        browserName: 'firefox'
     }],
     //
     // ===================
@@ -109,22 +109,22 @@ exports.config = {
     //
     // Gets executed before all workers get launched.
     onPrepare: function() {
-			Promise.promisifyAll(selenium);
-
-			var promise = selenium.installAsync({
-				logger: function(message) {
-					console.log(message);
-				}
-			}).then(function() {
-				console.log("Starting selenium");
-
-				return selenium.startAsync().then(function(child) {
-					selenium.child = child;
-					console.log("Selenium started");
-				});
-			});
-
-			return promise;
+//			Promise.promisifyAll(selenium);
+//
+//			var promise = selenium.installAsync({
+//				logger: function(message) {
+//					console.log(message);
+//				}
+//			}).then(function() {
+//				console.log("Starting selenium");
+//
+//				return selenium.startAsync().then(function(child) {
+//					selenium.child = child;
+//					console.log("Selenium started");
+//				});
+//			});
+//
+//			return promise;
     },
     //
     // Gets executed before test execution begins. At this point you will have access to all global

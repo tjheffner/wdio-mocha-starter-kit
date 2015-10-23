@@ -20,6 +20,16 @@ This is an example repo of a setup using the following technology:
 
 Validate all tests pass.
 
+## Alternate Install/Usage
+
+If it hangs at "Selenium starting":
+
+1. comment out lines 112-129 in wdio.conf.js (onPrepare: function(){} )
+2. run `brew install selenium-standalone`
+3. run `selenium-server -port 4444`
+4. new terminal window, same directory
+5. run `npm test`
+
 ## Travis Set Up
 
 The repo comes with [a `.travis.yml` file](/blob/master/.travis.yml) so you can easily run these tests via [Travis CI](https://travis-ci.org). To do so:
